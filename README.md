@@ -29,31 +29,31 @@ Custom Post has this structure:
 
 ```json
 {
-			"id" : <POST_TYPE_ID>,
-			"labels" : {
-				"name" : "<POST_TYPE_NAME>",
-				"singular_name" : "<POST_TYPE_NAME>",
-				"description"  : "<POST_TYPE_DESCRIPTION>"
-			},
-			"public" : true,
-			"hierarchical" : false,
-			"rewrite" : {
-				"slug" : "<POST_TYPE_SLUG>"
-			},
-			"supports" : ["title", "editor", "thumbnail", "page-attributes", "revisions"],
-			"meta_boxes" : [
-				{
-					"id" : "<POST_TYPE_METABOX_ID>",
-					"title" : "<POST_TYPE_METABOX_NAME>",
-					"context" : "normal",
-					"priority" : "high",
-					"descriptors" : [<POST_TYPE_METABOX_DESCRIPTORS>]
-				}
-			],
-			"custom_columns" : {
-				"<POST_TYPE_FIELD_SLUG>": "<POST_TYPE_FIELD_NAME>"
-			}
+	"id" : <POST_TYPE_ID>,
+	"labels" : {
+		"name" : "<POST_TYPE_NAME>",
+		"singular_name" : "<POST_TYPE_NAME>",
+		"description"  : "<POST_TYPE_DESCRIPTION>"
+	},
+	"public" : true,
+	"hierarchical" : false,
+	"rewrite" : {
+		"slug" : "<POST_TYPE_SLUG>"
+	},
+	"supports" : ["title", "editor", "thumbnail", "page-attributes", "revisions"],
+	"meta_boxes" : [
+		{
+			"id" : "<POST_TYPE_METABOX_ID>",
+			"title" : "<POST_TYPE_METABOX_NAME>",
+			"context" : "normal",
+			"priority" : "high",
+			"descriptors" : [<POST_TYPE_METABOX_DESCRIPTORS>]
 		}
+	],
+	"custom_columns" : {
+		"<POST_TYPE_FIELD_SLUG>": "<POST_TYPE_FIELD_NAME>"
+	}
+}
 ```
 
 "Post Type Metabox Descriptor" descibe the fields in a Meta box and has this structure:
@@ -80,15 +80,15 @@ Custom Taxonomies has the same structure of the register_taxonomy() arguments:
 
 ```json
 {
-			"id" : "<TAXONOMY_ID>",
-			"custom_posts" : ["<POST_TYPE_SLUG>"],
-			"hierarchical" : true,
-			"labels" : {<REGISTER_TAXONOMY_ARGUMENTS>},
-			"show_ui" : true,
-			"show_admin_column" : true,
-			"query_var" : true,
-			"rewrite" : { "slug" : "<TAXONOMY_SLUG>" }
-		}
+	"id" : "<TAXONOMY_ID>",
+	"custom_posts" : ["<POST_TYPE_SLUG>"],
+	"hierarchical" : true,
+	"labels" : {<REGISTER_TAXONOMY_ARGUMENTS>},
+	"show_ui" : true,
+	"show_admin_column" : true,
+	"query_var" : true,
+	"rewrite" : { "slug" : "<TAXONOMY_SLUG>" }
+}
 ```
 
 Menus are very simple:
