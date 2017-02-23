@@ -1,4 +1,4 @@
-# Wordpress-SiteBuilder
+# Wordpress SiteBuilder
 Create fast and simple Wordpress themes by setting up a JSON.
 
 Wordpress SiteBuilder is a simple theme that allow you to configure in a fast way your custom posts, taxonomies and menus.
