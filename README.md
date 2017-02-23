@@ -21,8 +21,8 @@ The JSON has this structure:
 {
 	"id" : "sitebuilder_theme",
 	"custom_posts" : [],
-  "custom_taxonomies": [],
-  "menus": []
+  	"custom_taxonomies": [],
+  	"menus": []
 }
 ```
 Custom Post has this structure:
@@ -95,6 +95,6 @@ Menus are very simple:
 
 ```json
 {
-    "<MENU_ID>": "<MENU_NAME>"
+	"<MENU_ID>": "<MENU_NAME>"
 }
 ```
