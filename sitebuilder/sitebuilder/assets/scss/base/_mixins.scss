@@ -1,0 +1,32 @@
+//	Based on: http://thesassway.com/intermediate/responsive-web-design-in-sass-using-media-queries-in-sass-32
+@mixin media($media)
+{
+	@if $media == $phone
+	{
+		@media only screen and (max-width: $sm - 1) { @content; }
+	}
+	@else if $media == $tablet 
+	{
+		@media only screen and (min-width: $sm) and (max-width: $md - 1) { @content; }
+	}
+	@else if $media == $tablet-phone
+	{
+		@media only screen and (max-width: $md - 1) { @content; }
+	}
+	@else if $media == $medium-screen
+	{
+		@media only screen and (min-width: $md) and (max-width: $lg - 1) { @content; }
+	}
+	@else if $media == $wide-screen
+	{
+		@media only screen and (min-width: $lg) { @content; }
+	}
+	@else if $media == $desktop
+	{
+		@media only screen and (min-width: $md) { @content; }
+	}
+	@else if $media == $wide-screen-hd
+	{
+		@media only screen and (min-width: $hlg) { @content; }
+	}
+}

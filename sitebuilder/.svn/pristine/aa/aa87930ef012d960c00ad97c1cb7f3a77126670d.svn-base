@@ -1,0 +1,32 @@
+$step: 5;
+$from: ceil( 1 /$step);
+$through: ceil( 100 /$step);
+$unit: 'px';
+
+@for $i from $from through $through {
+	$i : $i * $step;
+	.m-t-#{$i} {
+		margin-top: unquote("#{$i}#{$unit}") !important;
+	}
+}
+
+@for $i from $from through $through {
+	$i : $i * $step;
+	.m-b-#{$i} {
+		margin-top: unquote("#{$i}#{$unit}") !important;
+	}
+}
+
+@for $i from $from through $through {
+	$i : $i * $step;
+	.m-l-#{$i} {
+		margin-top: unquote("#{$i}#{$unit}") !important;
+	}
+}
+
+@for $i from $from through $through {
+	$i : $i * $step;
+	.m-r-#{$i} {
+		margin-top: unquote("#{$i}#{$unit}") !important;
+	}
+}

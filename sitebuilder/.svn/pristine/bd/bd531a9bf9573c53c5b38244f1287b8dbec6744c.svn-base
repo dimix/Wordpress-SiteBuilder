@@ -1,0 +1,162 @@
+@import "base/base";
+
+body {
+	font: $baseFont;
+	
+	@include media($wide-screen-hd) {
+		.container {
+			width: 1400px;
+		}
+	}
+}
+
+a:visited {
+	color: #6e6e6e;
+}
+
+a {
+	display: inline-block;
+	text-decoration: none;
+	color: $grayLink;
+}
+a:hover {
+	text-decoration: none;
+	color: $violet;
+}
+
+#page-container {
+	margin-top: 20px;
+}
+
+/* Header & Footer */
+
+.countrysite { display: none; }	//	hidden by default
+
+header.hd {
+	
+	ul, li {
+		list-style: none;
+	}
+	
+	.countrysite {
+		display: block;
+		top: 10px;
+		
+		&.btn-group.open .dropdown-toggle {
+			box-shadow:none;
+			
+			a:hover {
+				text-decoration: none;
+			}
+		}
+		
+		a:hover {
+			text-decoration: none;
+		}
+		
+		.dropdown-menu li {
+			border-bottom: 1px solid #efefef;
+			padding: 4px 0;
+		}
+		
+		.dropdown-menu a {
+			font: $baseFont;
+			font-size: 10px;
+			color: $gray;
+			background: none;
+		}
+		
+		.dropdown-menu .active a {
+			color: $black;
+		}
+	}
+}
+footer.ft,
+.footer_container {
+	font: $basicFont;
+	font-size: 10px;
+	overflow: hidden;
+	
+	ul, li {
+		list-style: none;
+	}
+}
+.footer-links {
+	display: none;
+	
+	li {
+		margin: 2px 0;
+	}
+}
+
+/* Fixes for Forzieri grabbed header and footer */
+
+.mobile {
+	.ft-links h4 a {
+		font-size: 14px;
+	}
+	
+	.mobile-header {
+		font-size: 11px;
+	}
+	
+	#mobile-drawer-overlay {
+		top: 0;
+	}
+}
+
+@include media($phone) {
+	
+	.mobile {
+		footer.ft {
+			.countrysite {
+				display: block;
+				margin: 0 auto;
+			}
+		}
+	}
+	
+	header.hd {
+		 .countrysite {
+			 display: none;
+		 }
+	}
+	
+}
+
+/* Global Navigation */
+
+#global-nav {
+	.nav-submenu-box.container {
+		width: auto;
+		padding: 18px 35px 50px;
+		margin: 0;
+		
+		.row {
+			margin: 0;
+			padding: 0;
+			padding-right: 35px;
+			padding-left: 35px;
+			margin-right: -1px;
+			
+			ul {
+				padding: 0;
+			}
+		}
+		
+		.row:last-child {
+			margin-right: 0;
+			padding-right: 0;
+		}
+		
+		h2 {
+			margin: 0;
+			margin-bottom: 20px;
+		}
+	}
+}
+
+.mobile-nav li a {
+	font-size: 10px;
+	padding: 4px 16px 8px 16px;
+}

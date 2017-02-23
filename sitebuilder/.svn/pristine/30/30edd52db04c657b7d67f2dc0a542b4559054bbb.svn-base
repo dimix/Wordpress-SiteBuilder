@@ -1,0 +1,371 @@
+/* Media Queries */
+/* Fonts */
+/* Colors */
+.m-t-5 {
+  margin-top: 5px !important; }
+
+.m-t-10 {
+  margin-top: 10px !important; }
+
+.m-t-15 {
+  margin-top: 15px !important; }
+
+.m-t-20 {
+  margin-top: 20px !important; }
+
+.m-t-25 {
+  margin-top: 25px !important; }
+
+.m-t-30 {
+  margin-top: 30px !important; }
+
+.m-t-35 {
+  margin-top: 35px !important; }
+
+.m-t-40 {
+  margin-top: 40px !important; }
+
+.m-t-45 {
+  margin-top: 45px !important; }
+
+.m-t-50 {
+  margin-top: 50px !important; }
+
+.m-t-55 {
+  margin-top: 55px !important; }
+
+.m-t-60 {
+  margin-top: 60px !important; }
+
+.m-t-65 {
+  margin-top: 65px !important; }
+
+.m-t-70 {
+  margin-top: 70px !important; }
+
+.m-t-75 {
+  margin-top: 75px !important; }
+
+.m-t-80 {
+  margin-top: 80px !important; }
+
+.m-t-85 {
+  margin-top: 85px !important; }
+
+.m-t-90 {
+  margin-top: 90px !important; }
+
+.m-t-95 {
+  margin-top: 95px !important; }
+
+.m-t-100 {
+  margin-top: 100px !important; }
+
+.m-b-5 {
+  margin-top: 5px !important; }
+
+.m-b-10 {
+  margin-top: 10px !important; }
+
+.m-b-15 {
+  margin-top: 15px !important; }
+
+.m-b-20 {
+  margin-top: 20px !important; }
+
+.m-b-25 {
+  margin-top: 25px !important; }
+
+.m-b-30 {
+  margin-top: 30px !important; }
+
+.m-b-35 {
+  margin-top: 35px !important; }
+
+.m-b-40 {
+  margin-top: 40px !important; }
+
+.m-b-45 {
+  margin-top: 45px !important; }
+
+.m-b-50 {
+  margin-top: 50px !important; }
+
+.m-b-55 {
+  margin-top: 55px !important; }
+
+.m-b-60 {
+  margin-top: 60px !important; }
+
+.m-b-65 {
+  margin-top: 65px !important; }
+
+.m-b-70 {
+  margin-top: 70px !important; }
+
+.m-b-75 {
+  margin-top: 75px !important; }
+
+.m-b-80 {
+  margin-top: 80px !important; }
+
+.m-b-85 {
+  margin-top: 85px !important; }
+
+.m-b-90 {
+  margin-top: 90px !important; }
+
+.m-b-95 {
+  margin-top: 95px !important; }
+
+.m-b-100 {
+  margin-top: 100px !important; }
+
+.m-l-5 {
+  margin-top: 5px !important; }
+
+.m-l-10 {
+  margin-top: 10px !important; }
+
+.m-l-15 {
+  margin-top: 15px !important; }
+
+.m-l-20 {
+  margin-top: 20px !important; }
+
+.m-l-25 {
+  margin-top: 25px !important; }
+
+.m-l-30 {
+  margin-top: 30px !important; }
+
+.m-l-35 {
+  margin-top: 35px !important; }
+
+.m-l-40 {
+  margin-top: 40px !important; }
+
+.m-l-45 {
+  margin-top: 45px !important; }
+
+.m-l-50 {
+  margin-top: 50px !important; }
+
+.m-l-55 {
+  margin-top: 55px !important; }
+
+.m-l-60 {
+  margin-top: 60px !important; }
+
+.m-l-65 {
+  margin-top: 65px !important; }
+
+.m-l-70 {
+  margin-top: 70px !important; }
+
+.m-l-75 {
+  margin-top: 75px !important; }
+
+.m-l-80 {
+  margin-top: 80px !important; }
+
+.m-l-85 {
+  margin-top: 85px !important; }
+
+.m-l-90 {
+  margin-top: 90px !important; }
+
+.m-l-95 {
+  margin-top: 95px !important; }
+
+.m-l-100 {
+  margin-top: 100px !important; }
+
+.m-r-5 {
+  margin-top: 5px !important; }
+
+.m-r-10 {
+  margin-top: 10px !important; }
+
+.m-r-15 {
+  margin-top: 15px !important; }
+
+.m-r-20 {
+  margin-top: 20px !important; }
+
+.m-r-25 {
+  margin-top: 25px !important; }
+
+.m-r-30 {
+  margin-top: 30px !important; }
+
+.m-r-35 {
+  margin-top: 35px !important; }
+
+.m-r-40 {
+  margin-top: 40px !important; }
+
+.m-r-45 {
+  margin-top: 45px !important; }
+
+.m-r-50 {
+  margin-top: 50px !important; }
+
+.m-r-55 {
+  margin-top: 55px !important; }
+
+.m-r-60 {
+  margin-top: 60px !important; }
+
+.m-r-65 {
+  margin-top: 65px !important; }
+
+.m-r-70 {
+  margin-top: 70px !important; }
+
+.m-r-75 {
+  margin-top: 75px !important; }
+
+.m-r-80 {
+  margin-top: 80px !important; }
+
+.m-r-85 {
+  margin-top: 85px !important; }
+
+.m-r-90 {
+  margin-top: 90px !important; }
+
+.m-r-95 {
+  margin-top: 95px !important; }
+
+.m-r-100 {
+  margin-top: 100px !important; }
+
+/* Home Page */
+.template-home header {
+  margin-top: 30px;
+  text-align: center; }
+  .template-home header h1 {
+    font: italic 400 18px "ltc-bodoni-175", "Times New Roman", serif;
+    font-size: 1.2em;
+    line-height: 0;
+    margin: 0 0 10px 0; }
+  .template-home header h2 {
+    font: normal 500 18px "Futura", "futura-pt", "Century Gothic", "Avant Garde", "AvantGarde", "CartoGothicStd-Book", sans-serif;
+    font-size: 2.4em;
+    letter-spacing: 0.4em;
+    text-transform: uppercase;
+    margin: 0; }
+  @media only screen and (min-width: 768px) and (max-width: 991px) {
+    .template-home header h1 {
+      font-size: 1.2em; }
+    .template-home header h2 {
+      font-size: 1.8em; } }
+  @media only screen and (max-width: 767px) {
+    .template-home header h1 {
+      font-size: 1.0em; }
+    .template-home header h2 {
+      font-size: 1.2em; } }
+.template-home .articles {
+  margin: 20px 0; }
+.template-home article {
+  text-align: center;
+  margin-bottom: 60px; }
+  .template-home article .image {
+    background-size: cover !important;
+    background-position: center !important;
+    height: 260px; }
+    .template-home article .image a {
+      display: block;
+      height: 100%;
+      width: 100%; }
+  .template-home article .title a {
+    color: #000; }
+    .template-home article .title a:hover {
+      text-decoration: none; }
+  .template-home article .title h3 {
+    font: italic 400 18px "ltc-bodoni-175", "Times New Roman", serif;
+    font-size: 1.0em;
+    line-height: 0.3em; }
+  .template-home article .title h4 {
+    margin: 0 0 10px 0;
+    font-size: 1.9em;
+    text-transform: uppercase; }
+  @media only screen and (min-width: 992px) and (max-width: 1199px) {
+    .template-home article .title h3 {
+      font-size: 0.8em; }
+    .template-home article .title h4 {
+      font-size: 1.5em; } }
+  @media only screen and (max-width: 767px) {
+    .template-home article .title h4 {
+      font-size: 1.0em; } }
+  .template-home article .excerpt {
+    font: italic 400 18px "ltc-bodoni-175", "Times New Roman", serif;
+    font-size: 0.8em;
+    font-style: normal; }
+    @media only screen and (max-width: 767px) {
+      .template-home article .excerpt {
+        font-size: 0.7em; } }
+  .template-home article.trend-article-wide .image {
+    min-height: 555px; }
+    @media only screen and (max-width: 767px) {
+      .template-home article.trend-article-wide .image {
+        min-height: 320px; } }
+    @media only screen and (min-width: 768px) and (max-width: 991px) {
+      .template-home article.trend-article-wide .image {
+        min-height: 555px; } }
+.template-home .home-box {
+  text-align: center;
+  padding: 0; }
+  .template-home .home-box .home-box-container {
+    height: 267px;
+    position: relative;
+    margin: 10px;
+    background-size: cover;
+    overflow: hidden; }
+    .template-home .home-box .home-box-container img {
+      width: 100%;
+      max-height: 100%; }
+    .template-home .home-box .home-box-container .title {
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      z-index: 2;
+      display: block;
+      font: italic 400 18px "ltc-bodoni-175", "Times New Roman", serif;
+      width: 100%;
+      font-size: 1.4em;
+      transition: all 0.5s ease; }
+      .template-home .home-box .home-box-container .title span {
+        text-transform: uppercase;
+        font: normal 500 18px "Futura", "futura-pt", "Century Gothic", "Avant Garde", "AvantGarde", "CartoGothicStd-Book", sans-serif;
+        font-style: normal;
+        font-size: 1.4em;
+        display: block; }
+    .template-home .home-box .home-box-container h1.title-fixed {
+      bottom: 90px; }
+      .template-home .home-box .home-box-container h1.title-fixed.title-shadow {
+        text-shadow: 0 0 0.3em #000; }
+    .template-home .home-box .home-box-container .call_to_action {
+      position: absolute;
+      z-index: 2;
+      text-transform: uppercase;
+      font-weight: 500;
+      width: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+      left: 0;
+      padding: 28px 12px;
+      color: #fff;
+      font: normal 500 18px "Futura", "futura-pt", "Century Gothic", "Avant Garde", "AvantGarde", "CartoGothicStd-Book", sans-serif;
+      font-size: 11px;
+      line-height: 1;
+      text-align: center;
+      text-shadow: 1px 1px 0px #000;
+      transition: all 0.5s linear;
+      bottom: -120px; }
+    .template-home .home-box .home-box-container:hover .title-shadow {
+      text-shadow: 0 0 0.3em #000; }
+    .template-home .home-box .home-box-container:hover .title {
+      bottom: 90px; }
+    .template-home .home-box .home-box-container:hover .call_to_action {
+      bottom: 0; }

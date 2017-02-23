@@ -1,0 +1,119 @@
+{
+	"id" : "sitebuilder_theme",
+	"custom_posts" : [
+		{
+			"id" : "events",
+			"labels" : {
+				"name" : "Events",
+				"singular_name" : "Event",
+				"description"  : "Site Builder Events"
+			},
+			"public" : true,
+			"hierarchical" : false,
+			"rewrite" : {
+				"slug" : "events"
+			},
+			"supports" : ["title", "editor", "thumbnail", "page-attributes", "revisions"],
+			"meta_boxes" : [
+				{
+					"id" : "details",
+					"title" : "Details",
+					"context" : "normal",
+					"priority" : "high",
+					"descriptors" : [
+						{"slug" : "start_date", "label" : "Start Date", "type" : "date", "default" : ""},
+						{"slug" : "end_date", "label" : "End Date", "type" : "date", "default" : ""},
+						{"slug" : "location", "label" : "Location", "type" : "text", "default" : ""}
+					]
+				}
+			],
+			"custom_columns" : {
+				"start_date": "Start Date",
+				"end_date": "End Date"
+			}
+		},
+		{
+			"id" : "apartments",
+			"labels" : {
+				"name" : "Apartments",
+				"singular_name" : "Apartment",
+				"description"  : "Site Builder Apartments"
+			},
+			"public" : true,
+			"hierarchical" : false,
+			"rewrite" : {
+				"slug" : "apartments"
+			},
+			"supports" : ["title", "editor", "thumbnail", "page-attributes", "revisions"],
+			"meta_boxes" : [
+				{
+					"id" : "details",
+					"title" : "Details",
+					"context" : "normal",
+					"priority" : "high",
+					"descriptors" : [
+						{"slug" : "bed_numbers", "label" : "Bed Numbers", "type" : "number", "default" : ""},
+						{"slug" : "price", "label" : "Price", "type" : "number", "default" : ""},
+						{"slug" : "gallery", "label" : "Gallery", "type" : "multiple-imageupload", "default" : ""},
+						{"slug" : "top_image", "label" : "Top Image", "type" : "imageupload", "default" : ""}
+					]
+				}
+			],
+			"custom_columns" : {
+				"price": "Price"
+			}
+		}
+	],
+	"custom_taxonomies" : [
+		{
+			"id" : "events-category",
+			"custom_posts" : ["events"],
+			"hierarchical" : true,
+			"labels" : {
+				"name" : "Event Categories",
+				"singular_name" : "Event Category",
+				"search_items" : "Search Categories",
+				"all_items" : "All Categories",
+				"parent_item" : "Parent Category",
+				"parent_item_colon" : "Parent Category:",
+				"edit_item" : "Edit Category",
+				"update_item" : "Update Category",
+				"add_new_item" : "Add New Category",
+				"new_item_name" : "New Category Name",
+				"menu_name" : "Events Category"
+			},
+			"show_ui" : true,
+			"show_admin_column" : true,
+			"query_var" : true,
+			"rewrite" : { "slug" : "events-category" }
+		},
+		{
+			"id" : "apartments-category",
+			"custom_posts" : ["apartments"],
+			"hierarchical" : true,
+			"labels" : {
+				"name" : "Apartment Types",
+				"singular_name" : "Apartment Type",
+				"search_items" : "Search Types",
+				"all_items" : "All Types",
+				"parent_item" : "Parent Type",
+				"parent_item_colon" : "Parent Type:",
+				"edit_item" : "Edit Type",
+				"update_item" : "Update Type",
+				"add_new_item" : "Add New Type",
+				"new_item_name" : "New Type Name",
+				"menu_name" : "Apartment Type"
+			},
+			"show_ui" : true,
+			"show_admin_column" : true,
+			"query_var" : true,
+			"rewrite" : { "slug" : "apartments-category" }
+		}
+	],
+	"menus": [
+		{
+			"blog-menu": "Blog Menu",
+			"home-menu": "Home Menu"
+		}
+	]
+}

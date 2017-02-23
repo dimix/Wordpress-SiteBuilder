@@ -1,0 +1,282 @@
+<?php
+
+include('form_helper.php');
+
+/* DESCRIPTORS
+	This functions return a custom array with the descriptor for the form_helper.php engine.
+*/
+
+function articleDetailsDescriptor() {
+	return [
+		['slug' => 'subtitle', 'label' => __('Subtitle', 'fzmagazine'), 'type' => 'text', 'default' => ''],
+		['slug' => 'excerpt', 'label' => __('Excerpt', 'fzmagazine'), 'type' => 'texteditor', 'default' => ''],
+	];
+}
+function articleLinkTemplateDetailsDescriptor() {
+	return [
+		['slug' => 'link_template_url', 'label' => __('Target URL', 'fzmagazine'), 'type' => 'text']
+	];
+}
+function articleSidebarDescriptor() {
+	return [
+		['slug' => 'trendpost_template', 'label' => '', 'type' => 'select', 'default' => '', 'values' => $GLOBALS['FZ_TA_TEMPLATES_TYPE']]
+	];
+}
+function articleSectionsDescriptor() {
+	$sections = array();
+	
+	for ($index = 0; $index < FZ_TA_SECTIONS_COUNT; $index++)
+	{
+		$sections[$index] = [
+			['slug' => 'section_'.$index.'_visible', 'label' => __('Section Visible', 'fzmagazine'), 'type' => 'checkbox', 'default' => 0],
+			['slug' => 'section_'.$index.'_left_align_image', 'label' => __('Left Aligned Image', 'fzmagazine'), 'type' => 'checkbox', 'default' => 0],
+			['slug' => 'section_'.$index.'_title', 'label' => __('Title', 'fzmagazine'), 'type' => 'text'],
+			['slug' => 'section_'.$index.'_products_sku', 'label' => __('Products', 'fzmagazine'), 'type' => 'productbox', 'limit' => FZ_TA_SECTION_MAX_PRODUCT_COUNT],
+			['slug' => 'section_'.$index.'_shop_now_title', 'label' => __('Shop Now Title', 'fzmagazine'), 'type' => 'text'],
+			['slug' => 'section_'.$index.'_shop_now_link', 'label' => __('Shop Now Link', 'fzmagazine'), 'type' => 'text'],
+			['slug' => 'section_'.$index.'_image_link', 'label' => __('Image Link', 'fzmagazine'), 'type' => 'imageupload'],
+			['slug' => 'section_'.$index.'_description', 'label' => __('Description', 'fzmagazine'), 'type' => 'texteditor']
+		];
+	}
+	
+	// debug($sections);
+	
+	return $sections;
+}
+function articleProductsTemplateDescriptor() {
+	return [
+		['slug' => 'products_template_box', 'label' => __('Add SKU'), 'type' => 'productbox', 'limit' => FZ_TA_MAX_PRODUCTS_COUNT]
+	];
+}
+function articleStaticTemplateDescriptor() {
+	return [
+		['slug' => 'static_template_content', 'label' => __('Description'), 'type' => 'texteditor']
+	];
+}
+
+/* COSTUM POST CREATION
+	This functions are required to create the post type object and the meta boxes
+*/
+
+function createTrendArticlePostType() {
+
+	$args = array(
+		'labels' => array(
+			'name' => __('Trend Articles'),
+			'singular_name' => __('Trend Article'),
+			'description'  => __('Trend Article', 'Forzieri Magazine Article'),
+		),
+		'public' => true,
+		'hierarchical' => true,
+		'rewrite' => array('slug' => 'trendpost'),
+		'supports' => array('title', 'editor', 'thumbnail', 'page-attributes', 'revisions')
+	);
+	register_post_type('trendpost', $args);
+	
+	$labels = array(
+		'name'              => __('Article Categories', 'fzmagazine'),
+		'singular_name'     => __('Article Category', 'fzmagazine' ),
+		'search_items'      => __('Search Categories', 'fzmagazine' ),
+		'all_items'         => __('All Categories', 'fzmagazine' ),
+		'parent_item'       => __('Parent Category', 'fzmagazine' ),
+		'parent_item_colon' => __('Parent Category:', 'fzmagazine' ),
+		'edit_item'         => __('Edit Category', 'fzmagazine' ),
+		'update_item'       => __('Update Category', 'fzmagazine' ),
+		'add_new_item'      => __('Add New Category', 'fzmagazine' ),
+		'new_item_name'     => __('New Category Name', 'fzmagazine' ),
+		'menu_name'         => __('Article Category', 'fzmagazine' ),
+	);
+
+	$args = array(
+		'hierarchical'      => true,
+		'labels'            => $labels,
+		'show_ui'           => true,
+		'show_admin_column' => true,
+		'query_var'         => true,
+		'rewrite'           => array( 'slug' => 'article-category' ),
+	);
+	register_taxonomy('article-category', array('trendpost'), $args);
+	
+	add_action('add_meta_boxes', 'createTrendArticleMetaboxes');
+	add_action('save_post', 'saveTrendArticleData');
+	
+	add_image_size(FZ_TA_SQUARE_THUMB_ID, 768, 768, ['center', 'center']);
+	add_image_size(FZ_TA_WIDE_ID, 1280, 555, true);
+	add_image_size(FZ_TA_WIDE_THUMB_ID, 768, 300, ['center', 'center']);
+}
+function createTrendArticleMetaboxes() {
+	
+	add_meta_box(
+		'details', // $id  
+		'Details', // $title   
+		'create_details_box', // $callback  
+		'trendpost', // $page  
+		'normal', // $context  
+		'high'  // $priority  
+	);
+	
+	add_meta_box(
+		'templates', // $id  
+		'Article Template', // $title   
+		'create_article_template_box', // $callback  
+		'trendpost', // $page  
+		'side', // $context  
+		'default'  // $priority  
+	);
+	
+	add_meta_box(
+		'article_products_list', // $id  
+		'Products List', // $title   
+		'create_article_products_box', // $callback  
+		'trendpost', // $page  
+		'normal', // $context  
+		'high'  // $priority  
+	);
+	
+	add_meta_box(
+		'static_template_details', // $id  
+		'Static Content Template Details', // $title   
+		'create_static_template_details_box', // $callback  
+		'trendpost', // $page  
+		'normal', // $context  
+		'high'  // $priority  
+	);
+	
+	add_meta_box(
+		'link_template_details', // $id  
+		'Link Template Details', // $title   
+		'create_link_template_details_box', // $callback  
+		'trendpost', // $page  
+		'normal', // $context  
+		'low'  // $priority  
+	);
+	
+	for ($x = 0; $x < FZ_TA_SECTIONS_COUNT; $x++)
+	{
+		add_meta_box(
+			'section_'.$x, // $id  
+			'Section '.($x+1), // $title   
+			'create_section', // $callback  
+			'trendpost', // $page  
+			'normal', // $context  
+			'low'  // $priority  
+		);
+	}
+}
+
+/* ADMIN METABOX CREATION
+	Metabox callbacks creation. This function are called by COSTUM POST CREATION functions and use the DESCRIPTORS arrays
+*/
+
+function create_section($post, $metabox) {
+	$sectionIndex = intval(str_replace('section_', '', $metabox['id']));
+	$sections = articleSectionsDescriptor();
+	createInputBoxFromDescriptors($sections[$sectionIndex]);
+}
+function create_details_box() {
+	createInputBoxFromDescriptors(articleDetailsDescriptor());
+	
+	echo '<script type="text/javascript"> var sections_template_count ='.FZ_TA_SECTIONS_COUNT.'; </script>';
+	echo '<script type="text/javascript"> var products_template_max_products ='.FZ_TA_MAX_PRODUCTS_COUNT.'; </script>';
+	echo '<script type="text/javascript"> var sections_template_max_products ='.FZ_TA_SECTION_MAX_PRODUCT_COUNT.'; </script>';
+}
+function create_article_template_box() {
+	createInputBoxFromDescriptors(articleSidebarDescriptor());
+}
+function create_link_template_details_box() {
+	createInputBoxFromDescriptors(articleLinkTemplateDetailsDescriptor());
+}
+function create_article_products_box() {
+	createInputBoxFromDescriptors(articleProductsTemplateDescriptor());
+}
+function create_static_template_details_box() {
+	createInputBoxFromDescriptors(articleStaticTemplateDescriptor());
+}
+
+/* DATA SAVING
+	This function get the DESCRIPTORS slug and save the data in the Database
+*/
+
+function saveTrendArticleData() {
+	
+	if (get_post_type() == 'trendpost')
+	{
+		// debug($_POST);
+		// die;
+		
+		global $post;
+		
+		$postId = $post->ID;
+		
+		//	Custom for the sections descriptors
+		
+		$sections = articleSectionsDescriptor();
+		foreach ($sections as $section)
+		{
+			foreach($section as $descriptor)
+			{
+				$slug = $descriptor['slug'];
+				if (isset( $_POST[$slug]))
+				{
+					update_post_meta($postId, $slug, $_POST[$slug]);
+				}
+			}
+		}
+		
+		//	All other descriptors
+		
+		$descriptors = array_merge(
+			articleSidebarDescriptor(),
+			articleDetailsDescriptor(),
+			articleLinkTemplateDetailsDescriptor(),
+			articleProductsTemplateDescriptor(),
+			articleStaticTemplateDescriptor()
+		);
+		
+		foreach($descriptors as $descriptor)
+		{
+			$slug = $descriptor['slug'];
+			if (isset( $_POST[$slug]))
+			{
+				update_post_meta($postId, $slug, $_POST[$slug]);
+			}
+		}
+	}
+}
+
+/* AJAX ACTIONS */
+
+function getProductFromSKU() {
+	global $wpdb;
+	
+	$sku = $_POST['sku'];
+	
+	$api = new ForzieriAPI();
+	$json = $api->getProductWithSKU($sku);
+	if (!is_null($json))
+	{
+		echo $json;
+	}
+	else
+	{
+		echo null;
+	}
+	
+	wp_die();
+}
+
+/* INITIALIZATION
+	Here call the functions for the initialization of the post type
+*/
+
+add_action('admin_enqueue_scripts', 'admin_style');
+add_action('init', 'createTrendArticlePostType');
+add_action('wp_ajax_getProductFromSKU', 'getProductFromSKU');
+
+/*
+	This call is required to support the Featured Image in the post type
+*/
+
+add_theme_support('post-thumbnails');
+
+?>

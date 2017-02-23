@@ -1,0 +1,34 @@
+/* Media Queries */
+
+//	Based on https://scotch.io/quick-tips/default-sizes-for-twitter-bootstraps-media-queries
+
+$hlg : 1440px;
+$lg : 1200px;
+$md : 992px;
+$sm : 768px;
+$xs : 320px;
+
+$phone			: 'phone';			//	< $sm - 1
+$tablet			: 'tablet';			//	> $sm && < $md - 1
+$tablet-phone	: 'tablet-phone';	//	< $md - 1
+$medium-screen	: 'medium-screen';	//	> $md && < $lg - 1
+$wide-screen	: 'wide-screen';	//	> $lg
+$wide-screen-hd	: 'wide-screen-hd';	//	> $hlg
+$desktop		: 'desktop';		//	> $md
+
+/* Fonts */
+
+$baseFontSize: 18px;
+$lightWeight: 400;
+$baseWeight: 500;
+$basicFont: normal $baseWeight $baseFontSize Verdana, Arial, sans-serif;
+$baseFont: normal $baseWeight $baseFontSize "Futura","futura-pt","Century Gothic","Avant Garde","AvantGarde","CartoGothicStd-Book",sans-serif;
+$serifFont: italic $lightWeight $baseFontSize "ltc-bodoni-175","Times New Roman",serif;
+
+/* Colors */
+
+$black: #000;
+$gray: #aaa;
+$grayLink: #878787;
+$white: #fff;
+$violet: #7b26d1;

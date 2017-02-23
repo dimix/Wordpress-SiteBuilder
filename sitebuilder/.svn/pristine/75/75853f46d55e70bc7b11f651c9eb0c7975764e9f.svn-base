@@ -1,0 +1,29 @@
+<?php
+class SiteBuilder {
+	
+	private $jsonFileName = 'site.json';
+	private $siteDescriptor = null;
+	private $sitePath = null;
+	
+	function __construct($sitePath) {
+		
+		$this->sitePath = $sitePath;
+		
+		$filePath = $this->sitePath . DS . $this->jsonFileName;
+		if (file_exists($filePath))
+		{
+			$fileContent = file_get_contents($filePath);
+			$this->siteDescriptor = json_decode($fileContent);
+			
+			print_r($this->siteDescriptor);
+			
+			die;
+		}
+		else
+		{
+			echo 'Error: File not found';
+			die;
+		}
+	}
+}
+?>

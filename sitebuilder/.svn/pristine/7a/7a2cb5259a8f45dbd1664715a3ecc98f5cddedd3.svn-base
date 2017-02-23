@@ -1,0 +1,202 @@
+<?php
+	function label($label) {
+		$html = '<div class="admin-label"><label>'.$label.'</label></div>';
+		
+		return $html;
+	}
+	
+	function textInput($name, $value, $label= null) {
+		$html = '';
+		if ($label != null) {
+			$html .= label($label);
+		}
+		
+		$html .= '<div class="admin-input"><input class="i18n-multilingual" type="text" name="'.$name.'" value="'.$value.'"></div>';
+	
+		return $html;
+	}
+	
+	function checkboxInput($name, $checked, $label= null) {
+		$html = '';
+		if ($label != null) {
+			$html .= label($label);
+		}
+		
+		$html .= '<div class="admin-input"><input type="checkbox" name="'.$name.'" value="1" '.($checked ? 'checked="checked"' : '').'></div>';
+		
+		return $html;
+	}
+	
+	function colorPickerInput($name, $value, $label= null) {
+		$html = '';
+		if ($label != null) {
+			$html .= label($label);
+		}
+		
+		$html .= '<div class="admin-input">
+				<input name="'.$name.'" id="'.$name.'" value="'.$value.'">
+				<div class="colorpicker" data-pickerid="'.$name.'"></div>
+			</div>';
+		
+		return $html;
+	}
+	
+	function select($name, $values, $selectedValue, $label = null) {
+		$html = '';
+		if ($label != null) {
+			$html .= label($label);
+		}
+		
+		$html .= '<select id="'.$name.'" name="'.$name.'" class="postform">';
+		
+		foreach($values as $key => $value)
+		{
+			$html .= '<option value="'.$key.'" ';
+			if ($selectedValue == $key) { $html .= 'selected="selected"'; }
+			$html .= '>'.$value.'</option>';
+		}
+		
+		$html .= '</select>';
+		
+		return $html;
+	}
+	
+	function textEditor($inputName, $value) {
+		wp_editor( $value, $inputName );
+	}
+	
+	function imageUpload($name, $value, $imageURL, $label= null) {
+		global $post;
+		$imageID = $name.'_image';
+		$meta = get_post_meta($post->ID, $name, true);
+		
+		$image = '';
+		if ($meta)
+		{
+			$image = wp_get_attachment_image_src($meta, 'thumbnail');
+			$image = $image[0];
+		}
+		
+		$html = '';
+		if ($label != null) {
+			$html .= label($label);
+		}
+		
+		$removeButtonStyle = 'display:none';
+		if ($imageURL != '')
+		{
+			$removeButtonStyle = 'display:inline';
+		}
+		
+		$html .= '<div class="admin-input image-uploader">
+				<div class="pull-left">
+					
+					<button class="ImageUploadButton button button-primary" data-inputid="'.$name.'" data-imageid="'.$imageID.'">'.__('Choose Image', 'fzmagazine').'</button>
+					<input type="hidden" id="'.$name.'" name="'.$name.'" value="'.$value.'">
+				</div>
+				<div class="pull-right">
+					<img class="admin-product-image" src="'.$imageURL.'" id="'.$imageID.'">
+					<br>
+					<button id="'.$name.'_remove-button" style="'.$removeButtonStyle.'" class="m-t-10 button button-delete" data-id="'.$name.'">'.__('Remove', 'fzmagazine').'</button>
+				</div>
+			</div><hr><br>';
+			
+		return $html;
+	}
+	
+	function productBox($name, $value, $label, $limit) {
+		$html = '';
+		if ($label != null) {
+			$html .= label($label);
+		}
+		
+		$html .= '<input name="'.$name.'_search_input" id="'.$name.'_search_input" class="product_box_search_input" type="text">';
+		$html .= '<span class="hint">'.__('Write the SKU and press Enter. You can write multiple SKUs separated by a comma.').'</span>';
+		
+		$html .= '<input name="'.$name.'" id="'.$name.'" value="'.htmlentities($value).'" type="hidden">';
+		
+		$html .= '<div class="products_box_container">';
+		$html .= '<ul id="'.$name.'_products_box" class="products_box" data-id="'.$name.'" data-limit="'.$limit.'">';
+		
+		$json = json_decode($value);
+		if (!is_null($json))
+		{
+			foreach ($json as $object)
+			{
+				$html .= '<li style="background-image:url('.$object->thumb.')" id="'.$object->sku.'" data-sku="'.$object->sku.'" data-brand="'.$object->brand_name.'" data-thumb="'.$object->thumb.'" class="ui-state-default">';
+				$html .= '<p>'.$object->brand_name.'</p>';
+				$html .= '<a data-id="'.$name.'" class="products_box_remove_button" href="javascript:;"><span class="dashicons dashicons-trash"></span></a>';
+				$html .= '</li>';
+			}
+		}
+		
+		$html .= '</ul>';
+		$html .= '</div>';
+		
+		return $html;
+	}
+	
+	function createInputBoxFromDescriptors($descriptors) {
+		global $post;
+		$customData = get_post_custom($post->ID);
+		
+		echo '<div class="admin-input-box">';
+		
+		foreach ($descriptors as $descriptor)
+		{
+			$type = $descriptor['type'];
+			$value = (isset($descriptor['default']) ? $descriptor['default']: '');
+			$label = $descriptor['label'];
+			$slug = $descriptor['slug'];
+			
+			if (isset($customData[$slug]) && count($customData[$slug]))
+			{
+				$value = $customData[$slug][0];
+			}
+			
+			if ($type == 'text')
+			{
+				echo textInput($slug, $value, $label);
+			}
+			else if ($type == 'checkbox')
+			{
+				echo checkboxInput($slug, $value, $label);
+			}
+			else if ($type == 'colorpicker')
+			{
+				echo colorPickerInput($slug, $value, $label);
+			}
+			else if ($type == 'select')
+			{
+				$values = $descriptor['values'];
+				
+				echo select($slug, $values, $value);
+			}
+			else if ($type == 'texteditor')
+			{
+				textEditor($slug, $value);
+			}
+			else if ($type == 'imageupload')
+			{
+				$meta = get_post_meta($post->ID, $slug, true);
+				$imageURL = '';
+				if ($meta)
+				{
+					$image = wp_get_attachment_image_src($meta, 'thumbnail');
+					$imageURL = $image[0];
+				}
+				
+				echo imageUpload($slug, $value, $imageURL, $label);
+			}
+			else if ($type == 'productbox')
+			{
+				$limit = $descriptor['limit'];
+				
+				echo productBox($slug, $value, $label, $limit);
+			}
+		}
+		
+		echo '</div>';
+	}
+	
+?>

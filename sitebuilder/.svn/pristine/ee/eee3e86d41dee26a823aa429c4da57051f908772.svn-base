@@ -1,0 +1,1 @@
+jQuery(document).ready(function($){var e=$(".colorpicker");e.length&&e.farbtastic("#"+e.data("pickerid")),$(".datetimepicker").datetimepicker(),$(".datepicker").datepicker(),$(".timepicker").timepicker()});

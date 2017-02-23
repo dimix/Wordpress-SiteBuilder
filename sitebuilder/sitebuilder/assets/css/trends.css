@@ -1,0 +1,521 @@
+/* Media Queries */
+/* Fonts */
+/* Colors */
+.m-t-5 {
+  margin-top: 5px !important; }
+
+.m-t-10 {
+  margin-top: 10px !important; }
+
+.m-t-15 {
+  margin-top: 15px !important; }
+
+.m-t-20 {
+  margin-top: 20px !important; }
+
+.m-t-25 {
+  margin-top: 25px !important; }
+
+.m-t-30 {
+  margin-top: 30px !important; }
+
+.m-t-35 {
+  margin-top: 35px !important; }
+
+.m-t-40 {
+  margin-top: 40px !important; }
+
+.m-t-45 {
+  margin-top: 45px !important; }
+
+.m-t-50 {
+  margin-top: 50px !important; }
+
+.m-t-55 {
+  margin-top: 55px !important; }
+
+.m-t-60 {
+  margin-top: 60px !important; }
+
+.m-t-65 {
+  margin-top: 65px !important; }
+
+.m-t-70 {
+  margin-top: 70px !important; }
+
+.m-t-75 {
+  margin-top: 75px !important; }
+
+.m-t-80 {
+  margin-top: 80px !important; }
+
+.m-t-85 {
+  margin-top: 85px !important; }
+
+.m-t-90 {
+  margin-top: 90px !important; }
+
+.m-t-95 {
+  margin-top: 95px !important; }
+
+.m-t-100 {
+  margin-top: 100px !important; }
+
+.m-b-5 {
+  margin-top: 5px !important; }
+
+.m-b-10 {
+  margin-top: 10px !important; }
+
+.m-b-15 {
+  margin-top: 15px !important; }
+
+.m-b-20 {
+  margin-top: 20px !important; }
+
+.m-b-25 {
+  margin-top: 25px !important; }
+
+.m-b-30 {
+  margin-top: 30px !important; }
+
+.m-b-35 {
+  margin-top: 35px !important; }
+
+.m-b-40 {
+  margin-top: 40px !important; }
+
+.m-b-45 {
+  margin-top: 45px !important; }
+
+.m-b-50 {
+  margin-top: 50px !important; }
+
+.m-b-55 {
+  margin-top: 55px !important; }
+
+.m-b-60 {
+  margin-top: 60px !important; }
+
+.m-b-65 {
+  margin-top: 65px !important; }
+
+.m-b-70 {
+  margin-top: 70px !important; }
+
+.m-b-75 {
+  margin-top: 75px !important; }
+
+.m-b-80 {
+  margin-top: 80px !important; }
+
+.m-b-85 {
+  margin-top: 85px !important; }
+
+.m-b-90 {
+  margin-top: 90px !important; }
+
+.m-b-95 {
+  margin-top: 95px !important; }
+
+.m-b-100 {
+  margin-top: 100px !important; }
+
+.m-l-5 {
+  margin-top: 5px !important; }
+
+.m-l-10 {
+  margin-top: 10px !important; }
+
+.m-l-15 {
+  margin-top: 15px !important; }
+
+.m-l-20 {
+  margin-top: 20px !important; }
+
+.m-l-25 {
+  margin-top: 25px !important; }
+
+.m-l-30 {
+  margin-top: 30px !important; }
+
+.m-l-35 {
+  margin-top: 35px !important; }
+
+.m-l-40 {
+  margin-top: 40px !important; }
+
+.m-l-45 {
+  margin-top: 45px !important; }
+
+.m-l-50 {
+  margin-top: 50px !important; }
+
+.m-l-55 {
+  margin-top: 55px !important; }
+
+.m-l-60 {
+  margin-top: 60px !important; }
+
+.m-l-65 {
+  margin-top: 65px !important; }
+
+.m-l-70 {
+  margin-top: 70px !important; }
+
+.m-l-75 {
+  margin-top: 75px !important; }
+
+.m-l-80 {
+  margin-top: 80px !important; }
+
+.m-l-85 {
+  margin-top: 85px !important; }
+
+.m-l-90 {
+  margin-top: 90px !important; }
+
+.m-l-95 {
+  margin-top: 95px !important; }
+
+.m-l-100 {
+  margin-top: 100px !important; }
+
+.m-r-5 {
+  margin-top: 5px !important; }
+
+.m-r-10 {
+  margin-top: 10px !important; }
+
+.m-r-15 {
+  margin-top: 15px !important; }
+
+.m-r-20 {
+  margin-top: 20px !important; }
+
+.m-r-25 {
+  margin-top: 25px !important; }
+
+.m-r-30 {
+  margin-top: 30px !important; }
+
+.m-r-35 {
+  margin-top: 35px !important; }
+
+.m-r-40 {
+  margin-top: 40px !important; }
+
+.m-r-45 {
+  margin-top: 45px !important; }
+
+.m-r-50 {
+  margin-top: 50px !important; }
+
+.m-r-55 {
+  margin-top: 55px !important; }
+
+.m-r-60 {
+  margin-top: 60px !important; }
+
+.m-r-65 {
+  margin-top: 65px !important; }
+
+.m-r-70 {
+  margin-top: 70px !important; }
+
+.m-r-75 {
+  margin-top: 75px !important; }
+
+.m-r-80 {
+  margin-top: 80px !important; }
+
+.m-r-85 {
+  margin-top: 85px !important; }
+
+.m-r-90 {
+  margin-top: 90px !important; }
+
+.m-r-95 {
+  margin-top: 95px !important; }
+
+.m-r-100 {
+  margin-top: 100px !important; }
+
+/* =WordPress Core
+-------------------------------------------------------------- */
+.alignnone {
+  margin: 5px 20px 20px 0; }
+
+.aligncenter,
+div.aligncenter {
+  display: block;
+  margin: 5px auto 5px auto; }
+
+.alignright {
+  float: right;
+  margin: 5px 0 20px 20px; }
+
+.alignleft {
+  float: left;
+  margin: 5px 20px 20px 0; }
+
+a img.alignright {
+  float: right;
+  margin: 5px 0 20px 20px; }
+
+a img.alignnone {
+  margin: 5px 20px 20px 0; }
+
+a img.alignleft {
+  float: left;
+  margin: 5px 20px 20px 0; }
+
+a img.aligncenter {
+  display: block;
+  margin-left: auto;
+  margin-right: auto; }
+
+.wp-caption {
+  background: #fff;
+  border: 1px solid #f0f0f0;
+  max-width: 96%;
+  /* Image does not overflow the content area */
+  padding: 5px 3px 10px;
+  text-align: center; }
+
+.wp-caption.alignnone {
+  margin: 5px 20px 20px 0; }
+
+.wp-caption.alignleft {
+  margin: 5px 20px 20px 0; }
+
+.wp-caption.alignright {
+  margin: 5px 0 20px 20px; }
+
+.wp-caption img {
+  border: 0 none;
+  height: auto;
+  margin: 0;
+  max-width: 98.5%;
+  padding: 0;
+  width: auto; }
+
+.wp-caption p.wp-caption-text {
+  font-size: 11px;
+  line-height: 17px;
+  margin: 0;
+  padding: 0 4px 5px; }
+
+/* Text meant only for screen readers. */
+.screen-reader-text {
+  clip: rect(1px, 1px, 1px, 1px);
+  position: absolute !important;
+  height: 1px;
+  width: 1px;
+  overflow: hidden; }
+
+.screen-reader-text:focus {
+  background-color: #f1f1f1;
+  border-radius: 3px;
+  box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+  clip: auto !important;
+  color: #21759b;
+  display: block;
+  font-size: 14px;
+  font-size: 0.875rem;
+  font-weight: bold;
+  height: auto;
+  left: 5px;
+  line-height: normal;
+  padding: 15px 23px 14px;
+  text-decoration: none;
+  top: 5px;
+  width: auto;
+  z-index: 100000;
+  /* Above WP toolbar. */ }
+
+.sections_template article .article-block {
+  margin: 0 0 120px 0; }
+  .sections_template article .article-block h2 {
+    text-align: center;
+    font: normal 500 18px "Futura", "futura-pt", "Century Gothic", "Avant Garde", "AvantGarde", "CartoGothicStd-Book", sans-serif;
+    font-size: 1.4em;
+    text-transform: uppercase;
+    margin-top: 65px; }
+  .sections_template article .article-block .description {
+    margin: 20px auto;
+    width: 80%;
+    text-align: center; }
+    .sections_template article .article-block .description p {
+      padding: 0 0 6px 0;
+      color: #000;
+      font: italic 400 18px "ltc-bodoni-175", "Times New Roman", serif;
+      font-style: normal;
+      font-size: 0.9em;
+      line-height: 1.6em;
+      margin: 0; }
+  .sections_template article .article-block .shopnow {
+    text-align: center; }
+    .sections_template article .article-block .shopnow a {
+      text-decoration: underline;
+      text-transform: uppercase;
+      color: #000;
+      font-size: 0.7em; }
+  .sections_template article .article-block .section-image {
+    width: 100%; }
+  .sections_template article .article-block .product {
+    transition: all 0.5s ease;
+    transition: 1s filter linear;
+    -webkit-transition: 1s -webkit-filter linear;
+    -moz-transition: 1s -moz-filter linear;
+    -ms-transition: 1s -ms-filter linear;
+    -o-transition: 1s -o-filter linear;
+    text-align: center;
+    position: relative;
+    overflow: hidden; }
+    .sections_template article .article-block .product a {
+      text-decoration: none;
+      color: #000; }
+    .sections_template article .article-block .product p {
+      font-size: 0.6em;
+      text-transform: uppercase; }
+    .sections_template article .article-block .product img {
+      max-width: 200px;
+      max-height: 300px; }
+    .sections_template article .article-block .product:hover img {
+      -webkit-filter: blur(10px);
+      -moz-filter: blur(10px);
+      -o-filter: blur(10px);
+      -ms-filter: blur(10px);
+      filter: blur(10px); }
+    .sections_template article .article-block .product:hover .product-hover {
+      opacity: 1; }
+    .sections_template article .article-block .product .product-hover {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      z-index: 10;
+      width: 100%;
+      max-width: 70%;
+      margin: 0 14%;
+      padding: 5px;
+      opacity: 0;
+      background-color: rgba(0, 0, 0, 0.5);
+      color: #fff; }
+  .sections_template article .article-block .template-1 .product p {
+    margin-top: 20px; }
+  .sections_template article .article-block .template-1 .product img {
+    width: auto;
+    max-height: none; }
+  .sections_template article .article-block .template-2 .product img {
+    max-width: 150px;
+    max-height: 300px; }
+  @media only screen and (min-width: 992px) {
+    .sections_template article .article-block .product img {
+      width: auto;
+      max-height: 180px; }
+    .sections_template article .article-block .product .product-hover {
+      max-width: none;
+      margin: 0; }
+    .sections_template article .article-block .template-1 .product img {
+      width: auto;
+      max-height: 330px; } }
+  @media only screen and (min-width: 1200px) {
+    .sections_template article .article-block .product img {
+      width: auto;
+      max-height: 220px; }
+    .sections_template article .article-block .product .product-hover {
+      max-width: 70%;
+      margin: 0 14%; }
+    .sections_template article .article-block .template-1 .product img {
+      width: auto;
+      max-height: 400px; } }
+  @media only screen and (min-width: 1440px) {
+    .sections_template article .article-block .product img {
+      width: auto;
+      max-height: 260px; }
+    .sections_template article .article-block .product .product-hover {
+      max-width: 70%;
+      margin: 0 14%; }
+    .sections_template article .article-block .template-1 .product img {
+      width: auto;
+      max-width: 300px;
+      max-height: none; } }
+  @media only screen and (max-width: 767px) {
+    .sections_template article .article-block .product img {
+      max-height: 220px; }
+    .sections_template article .article-block .template-1 .product img {
+      width: auto;
+      max-height: none; } }
+
+/* Trends Article */
+.trends_article header {
+  color: #000; }
+  .trends_article header .image img {
+    width: 100%; }
+  .trends_article header .content {
+    margin-top: 28px;
+    text-align: center; }
+    .trends_article header .content h1 {
+      font: italic 400 18px "ltc-bodoni-175", "Times New Roman", serif;
+      font-size: 1.2em;
+      margin: 0; }
+    .trends_article header .content h2 {
+      text-transform: uppercase;
+      margin: 0 0 28px 0;
+      font-size: 2.2em; }
+    .trends_article header .content .content-text {
+      font: italic 400 18px "ltc-bodoni-175", "Times New Roman", serif;
+      font-style: normal;
+      font-size: 0.9em;
+      line-height: 1.5em;
+      width: 80%;
+      margin: 0 auto; }
+.trends_article footer h4 {
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 8px;
+  font-size: 0.8em;
+  margin-bottom: 20px; }
+.trends_article footer .article-scroller-section {
+  overflow: hidden; }
+  .trends_article footer .article-scroller-section .article-scroller-homeelement {
+    height: 138px;
+    background: #000; }
+  .trends_article footer .article-scroller-section .article-scroller {
+    display: none;
+    margin-bottom: 10px;
+    height: 138px; }
+    .trends_article footer .article-scroller-section .article-scroller li {
+      list-style: none;
+      height: 138px; }
+      .trends_article footer .article-scroller-section .article-scroller li a {
+        position: relative;
+        height: 100%; }
+      .trends_article footer .article-scroller-section .article-scroller li div {
+        display: table;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        text-transform: uppercase;
+        text-align: center;
+        font-size: 1.0em; }
+        .trends_article footer .article-scroller-section .article-scroller li div p {
+          height: 100%;
+          display: none;
+          padding: 8px;
+          color: #fff;
+          line-height: 1.2;
+          text-shadow: 0 0 5px #000;
+          vertical-align: middle;
+          overflow: hidden; }
+        .trends_article footer .article-scroller-section .article-scroller li div:hover p {
+          display: table-cell; }
+  .trends_article footer .article-scroller-section .bx-wrapper {
+    box-shadow: none;
+    border: 0;
+    margin: 0; }
+.trends_article article {
+  margin-top: 120px; }

@@ -1,0 +1,213 @@
+@import "base/base";
+
+/* Home Page */
+
+.template-home {
+	
+	header {
+		
+		margin-top: 30px;
+		text-align: center;
+		
+		h1 {
+			font: $serifFont;
+			font-size: 1.2em;
+			line-height: 0;
+			margin: 0 0 10px 0;
+		}
+		
+		h2 {
+			font: $baseFont;
+			font-size: 2.4em;
+			letter-spacing: 0.4em;
+			text-transform: uppercase;
+			margin: 0;
+		}
+		
+		@include media($tablet) {
+			h1 {
+				font-size: 1.2em;
+			}
+			
+			h2 {
+				font-size: 1.8em;
+			}
+		}
+		
+		@include media($phone) {
+			h1 {
+				font-size: 1.0em;
+			}
+			
+			h2 {
+				font-size: 1.2em;
+			}
+		}
+	}
+	
+	.articles {
+		margin: 20px 0;
+	}
+	
+	article {
+		
+		text-align: center;
+		margin-bottom: 60px;
+		
+		.image {
+			background-size: cover !important;
+			background-position: center !important; 
+			
+			height: 260px;
+			
+			a {
+				display: block;
+				height: 100%;
+				width: 100%;
+			}
+		}
+		
+		.title {
+			
+			a {
+				color: $black;
+				
+				&:hover {
+					text-decoration: none;
+				}
+			}
+			
+			h3 {
+				font: $serifFont;
+				font-size: 1.0em;
+				line-height: 0.3em;
+			}
+			
+			h4 {
+				margin: 0 0 10px 0;
+				font-size: 1.9em;
+				text-transform: uppercase;
+			}
+			
+			@include media($medium-screen) {
+				h3 {
+					font-size: 0.8em;
+				}
+			
+				h4 {
+					font-size: 1.5em;
+				}
+			}
+			
+			@include media($phone) {
+				h4 {
+					font-size: 1.0em;
+				}
+			}
+		}
+		
+		.excerpt {
+			font: $serifFont;
+			font-size: 0.8em;
+			font-style: normal;
+			
+			@include media($phone) {
+				font-size: 0.7em;
+			}
+		}
+		
+		&.trend-article-wide {
+			.image {
+				min-height: 555px;
+				
+				@include media($phone) {
+					min-height: 320px;
+				}
+				
+				@include media($tablet) {
+					min-height: 555px;
+				}
+			}
+		}
+		
+	}
+	
+	.home-box {
+		text-align: center;
+		padding: 0;
+	
+		.home-box-container {
+			height: 267px;
+			position: relative;
+			margin: 10px;
+			background-size: cover;
+			overflow: hidden;
+		
+			img {
+				width: 100%;
+				max-height: 100%;
+			}
+		
+			.title {
+				position: absolute;
+				left: 0;
+				bottom: 0;
+				z-index: 2;
+				display: block;
+				font: $serifFont;
+				width: 100%;
+				font-size: 1.4em;
+				transition: all 0.5s ease;
+			
+				span {
+					text-transform: uppercase;
+					font: $baseFont;
+					font-style: normal;
+					font-size: 1.4em;
+					display: block;
+				}
+			}
+		
+			h1.title-fixed {
+				bottom: 90px;
+			
+				&.title-shadow {
+					text-shadow: 0 0 0.3em #000;
+				}
+			}
+		
+			.call_to_action {
+				position: absolute;
+				z-index: 2;
+				text-transform: uppercase;
+				font-weight: 500;
+				width: 100%;
+				background-color: rgba(0,0,0,0.5);
+				left: 0;
+				padding: 28px 12px;
+				color: #fff;
+				font: $baseFont;
+				font-size: 11px;
+				line-height: 1;
+				text-align: center;
+				text-shadow: 1px 1px 0px #000;
+				transition: all 0.5s linear;
+				bottom: -120px;
+			}
+		
+			&:hover {
+				.title-shadow {
+					text-shadow: 0 0 0.3em #000;
+				}
+			
+				.title {
+					bottom: 90px;
+				}
+			
+				.call_to_action {
+					bottom: 0;
+				}
+			}
+		}
+	}
+}

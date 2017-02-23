@@ -1,0 +1,157 @@
+@import "base/accessors";
+
+/* Accessors */
+.row {
+	overflow: hidden;
+}
+.col-50 {
+	width: 50%;
+	float: left;
+}
+.pull-left {
+	float: left;
+}
+.pull-right {
+	float: right;
+}
+
+.button-delete {
+	color: #fff !important;
+	border-color: #a00 !important;
+	background: #a00 !important;
+
+}
+
+/* Settings */
+
+.settings-tabs {
+	overflow: hidden;
+	z-index: 2;
+	position: relative;
+	top: 1px;
+	
+	.nav-tab-active {
+		background: white;
+	}
+}
+.settings-wrap {
+	border: 1px solid #ccc;
+	margin: 0 20px 0 0;
+	padding: 20px;
+	background: white;
+	border-radius: 2px;
+}
+.sortable-articles {
+	min-height: 200px;
+	margin: 10px;
+	
+	li {
+		border-radius: 4px;
+		background: #efefef;
+		padding: 10px;
+		margin: 5px;
+		
+		&:hover {
+			cursor: move;
+		}
+		
+		a {
+			border-radius: 4px;
+			text-decoration: none;
+		}
+	}
+	
+	&#homepage-articles li:first-child {
+		background: #0085BA;
+		color: #fff;
+		
+		a {
+			color: white;
+		}
+	}
+	
+	&#all-articles {
+		
+		max-height: 420px;
+		overflow-y: scroll;
+		
+		a {
+			display: none;
+		}
+	}
+}
+
+
+/* Meta Boxes */
+
+.admin-input-box {
+	overflow: hidden;
+	
+	.admin-label {
+		width: 24%;
+		display: inline-block;
+		vertical-align: top;
+		margin-top:10px;
+		margin-bottom:10px;
+		font-weight: bold;
+	
+		label {
+			vertical-align: middle;
+		}
+	}
+
+	.admin-input {
+		width: 75%;
+		display: inline-block;
+		vertical-align: top;
+		margin-top:10px;
+		margin-bottom:10px;
+		
+		input:not([type=checkbox]), select{
+			width: 100%;
+		}
+	}
+
+	.admin-product-image {
+		float: right;
+		max-height: 100px;
+		
+	}
+	
+	.hint {
+		font-size: 10px;
+		padding: 6px;
+	}
+}
+
+/* Image Uploader */
+
+.image-uploader {
+	overflow: hidden;
+}
+.multiple-image-uploader {
+	.gallery {
+		margin: 10px 0;
+		
+		.gallery-item {
+			position: relative;
+			display: inline-block;
+			width: 100px;
+			height: 100px;
+			margin-right: 10px;
+			margin-bottom: 10px;
+			
+			a {
+				position: absolute;
+				top: 10px;
+				left: 10px;
+				z-index: 1;
+				
+				background: white;
+				border-radius: 3px;
+				
+				text-decoration: none;
+			}
+		}
+	}
+}

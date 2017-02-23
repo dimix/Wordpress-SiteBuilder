@@ -1,0 +1,121 @@
+@import "base/base";
+@import "base/wp-core";
+@import "base/sections_template";
+
+/* Trends Article */
+
+.trends_article {
+	
+	header {
+		
+		color: $black;
+		
+		.image img {
+			width: 100%;
+		}
+		
+		.content {
+			margin-top: 28px;
+			text-align: center;
+		
+			h1 {
+				font: $serifFont;
+				font-size: 1.2em;
+				margin: 0;
+			}
+		
+			h2 {
+				text-transform: uppercase;
+				margin: 0 0 28px 0;
+				font-size: 2.2em;
+			}
+		
+			.content-text {
+				font: $serifFont;
+				font-style: normal;
+				font-size: 0.9em;
+				line-height: 1.5em;
+				
+				width: 80%;
+				margin: 0 auto;
+			}
+		}
+		
+	}
+	
+	footer {
+		h4 {
+			text-align: center;
+			text-transform: uppercase;
+			letter-spacing: 8px;
+			font-size: 0.8em;
+			margin-bottom: 20px;
+		}
+		
+		.article-scroller-section {
+			overflow: hidden;
+			
+			.article-scroller-homeelement {
+				height: 138px;
+				background: $black;
+			}
+			.article-scroller {
+				display: none;
+				margin-bottom: 10px;
+				height: 138px;
+				
+				li {
+					list-style: none;
+					height: 138px;
+					
+					a {
+						position: relative;
+						height: 100%;
+					}
+					
+					div {
+						display: table;
+						position: absolute;
+						top: 0;
+						left: 0;
+						width: 100%;
+						height: 100%;
+						text-transform: uppercase;
+						text-align: center;
+						
+						font-size: 1.0em;
+						
+						p {
+							height: 100%;
+							display: none;
+							padding: 8px;
+							color: $white;
+							line-height: 1.2;
+							text-shadow: 0 0 5px #000;
+							vertical-align: middle;
+							overflow: hidden;
+						}
+						
+						&:hover {
+							p {
+								display: table-cell;
+							}
+						}
+					}
+				}
+			}
+			
+			.bx-wrapper {
+				box-shadow: none;
+				border: 0;
+				margin: 0;
+			}
+		}
+	}
+	
+	article {
+		
+		margin-top: 120px;
+	}
+	
+}

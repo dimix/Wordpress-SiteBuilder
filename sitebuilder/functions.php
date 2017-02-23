@@ -1,0 +1,6 @@
+<?php
+require_once('sitebuilder/lib/common.php');
+require_once('sitebuilder/lib/SiteBuilder.php');
+
+$sb = new SiteBuilder(__DIR__);
+?>
